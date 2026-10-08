@@ -1,5 +1,5 @@
 # Kaede-WaBot
-Un bugsito de WhatsApp basado en la libreria `baileys` este botofrece gran variedad de comandos listos para usarse y mejorar la experiencia en Whatsapp.
+Un bugsito de WhatsApp basado en la libreria `baileys` este bot ofrece gran variedad de comandos listos para usarse y mejorar la experiencia en Whatsapp.
 
 > [!NOTE]
 > Este proyecto esta siendo actualizando constatemente, ofrece un pequeño soporte de lids para administradores de grupo, lo cual aun prensenta unos pocos de bugs. Te invito a que te unas a mi [!Canal de Whatsapp](https://whatsapp.com/channel/0029VbB1ujH8qIzjgU3Vul1l)
