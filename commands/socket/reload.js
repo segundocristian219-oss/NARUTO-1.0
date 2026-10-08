@@ -1,6 +1,4 @@
-import { startPremBot } from '../../core/prems.js'
-import { startModBot } from '../../core/mods.js'
-import { startSubBot } from '../../core/subs.js'
+import { startSubBot } from './subbot.js'
 import fs from 'fs'
 import path from 'path'
 import { jidDecode } from '@whiskeysockets/baileys'
@@ -27,7 +25,7 @@ export default {
     const botType = isOficialBot ? 'Principal' : isPremiumBot ? 'Premium' : isModBot ? 'Main' : 'SubBot'
 
     const basePath = 'Sessions'
-    const sessionTypes = ['Subs', 'Mods', 'Prems']
+    const sessionTypes = ['Subs']
 
     const sessionPath = sessionTypes
       .map(type => path.join(basePath, type, `${botId}/creds.db`))
@@ -40,13 +38,6 @@ export default {
     const caption = '✿ La sesión fue recargada correctamente.'
     const phone = args[0]?.replace(/\D/g, '') || botId
     const chatId = msg.chat
-
-    if (botType === 'SubBot') {
-      await startSubBot(msg, sock, caption, false, phone, chatId, {}, true, sessionPath)
-    } else if (botType === 'Premium') {
-      await startPremBot(msg, sock, caption, false, phone, chatId, {}, true, sessionPath)
-    } else if (botType === 'Main') {
-      await startModBot(msg, sock, caption, false, phone, chatId, {}, true, sessionPath)
-    }
+    await startSubBot(msg, sock, caption, false, phone, chatId, {}, true, sessionPath)
   }
 }

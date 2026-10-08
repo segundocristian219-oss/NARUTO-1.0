@@ -195,7 +195,7 @@ export function initDB() {
     db.exec(`
         CREATE TABLE IF NOT EXISTS settings (
         id TEXT PRIMARY KEY,
-        self BOOLEAN DEFAULT 1,
+        self BOOLEAN DEFAULT 0,
         prefix TEXT DEFAULT '[\"#\"]',
         commandsejecut INTEGER DEFAULT 0,
         newsletter_id TEXT DEFAULT '120363399914074176@newsletter',

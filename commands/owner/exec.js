@@ -1,9 +1,6 @@
 import syntaxerror from 'syntax-error';
 import { format } from 'util';
 import { createRequire } from 'module';
-import { getMessage } from '#langs'
-
-global.getMessage = getMessage
 
 export default {
   command: ['ex', 'e'],

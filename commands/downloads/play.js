@@ -1,13 +1,10 @@
 import yts from 'yt-search'
 import fetch from 'node-fetch'
-import { getBuffer } from '../../core/message.js'
+import { getBuffer } from '#message'
 import crypto from 'crypto'
 import axios from 'axios'
 import { prepareWAMessageMedia } from '@whiskeysockets/baileys'
 import db from '#db'
-import impitPkg from 'impit'
-const { Impit } = impitPkg
-const impit = new Impit({ browser: 'chrome' })
 
 class KaedeApiError extends Error {
     constructor(message) {
